@@ -1,8 +1,14 @@
-var colors = ['green','red','blu','purple']
+const hexNum = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
 
-const changeColor = () => {
-    var randomColors = Math.floor(Math.random()*colors.length)
-    $('body').css({"background-color": colors[randomColors]});
-}
-$('#btn').on('click',changeColor);
 
+const randomColor = () => {
+    var hexArr = '#';
+    while (hexArr.length < 7 ) {
+        var random = Math.floor(Math.random() * hexNum.length);
+        hexArr += hexNum[random];
+    }
+    $('body').css('background-color',hexArr);
+    $('.hexCode').text(hexArr);
+};
+
+$('#btn').on('click',randomColor);

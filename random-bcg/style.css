@@ -1,16 +1,11 @@
 body {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-#btn {
-    border-radius: 10%;
-    padding: 20px;
-    font-size: 1.5em;
-}
-
-#btn:hover {
-    background-color: dodgerblue;
+.container {
+    text-align: center;
 }
